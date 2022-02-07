@@ -1,0 +1,8 @@
+opentelemetry-api
+opentelemetry-sdk
+opentelemetry-instrumentation-flask
+Flask
+opentelemetry-instrumentation-requests
+gunicorn
+requests
+opentelemetry-exporter-otlp
