@@ -21,7 +21,11 @@ span_exporter = OTLPSpanExporter(
     # headers=(("metadata", "metadata")),
 )
 
-tracer_provider = TracerProvider()
+resource = Resource(attributes={
+    "service.name": "example_service"
+})
+
+tracer_provider = TracerProvider(resource=resource)
 trace.set_tracer_provider(tracer_provider)
 span_processor = BatchSpanProcessor(span_exporter)
 tracer_provider.add_span_processor(span_processor)
